@@ -1,0 +1,132 @@
+  public void profileKeyLogic(){
+        keyActionMap.put(VC_Q, new ActionList(
+                () -> r.write("Q"),
+                () -> r.write("q"),
+                () -> r.write("queef ")
+        ));
+        keyActionMap.put(VC_W, new ActionList(
+                () -> r.write("W"),
+                () -> r.write("w"),
+                () -> r.write("whore ")
+        ));
+        keyActionMap.put(VC_E, new ActionList(
+                () -> r.write("E"),
+                () -> r.write("e"),
+                () -> r.write("erection ")
+        ));
+        keyActionMap.put(VC_R, new ActionList(
+                () -> r.write("R"),
+                () -> r.write("r"),
+                () -> r.write("roid ")
+        ));
+        keyActionMap.put(VC_T, new ActionList(
+                () -> r.write("T"),
+                () -> r.write("t"),
+                () -> r.write("turd ")
+        ));
+        keyActionMap.put(VC_Y, new ActionList(
+                () -> r.write("Y"),
+                () -> r.write("y"),
+                () -> r.write("yanking ")
+        ));
+        keyActionMap.put(VC_U, new ActionList(
+                () -> r.write("U"),
+                () -> r.write("u"),
+                () -> r.write("underpants ")
+        ));
+        keyActionMap.put(VC_I, new ActionList(
+                () -> r.write("I"),
+                () -> r.write("i"),
+                () -> r.write("incestbreeded ")
+        ));
+        keyActionMap.put(VC_O, new ActionList(
+                () -> r.write("O"),
+                () -> r.write("o"),
+                () -> r.write("overlactating ")
+        ));
+        keyActionMap.put(VC_P, new ActionList(
+                () -> r.write("P"),
+                () -> r.write("p"),
+                () -> r.write("panties ")
+        ));
+        keyActionMap.put(VC_A, new ActionList(
+                () -> r.write("A"),
+                () -> r.write("a"),
+                () -> r.write("analsniffing ")
+        ));
+        keyActionMap.put(VC_S, new ActionList(
+                () -> r.write("S"),
+                () -> r.write("s"),
+                () -> r.write("slippery ")
+        ));
+        keyActionMap.put(VC_D, new ActionList(
+                () -> r.write("D"),
+                () -> r.write("d"),
+                () -> r.write("drunken ")
+        ));
+        keyActionMap.put(VC_F, new ActionList(
+                () -> r.write("F"),
+                () -> r.write("f"),
+                () -> r.write("fucking ")
+        ));
+        keyActionMap.put(VC_G, new ActionList(
+                () -> r.write("G"),
+                () -> r.write("g"),
+                () -> r.write("gluten ")
+        ));
+        keyActionMap.put(VC_H, new ActionList(
+                () -> r.write("H"),
+                () -> r.write("h"),
+                () -> r.write("horsefucking ")
+        ));
+        keyActionMap.put(VC_J, new ActionList(
+                () -> r.write("J"),
+                () -> r.write("j"),
+                () -> r.write("jelly ")
+        ));
+        keyActionMap.put(VC_K, new ActionList(
+                () -> r.write("K"),
+                () -> r.write("k"),
+                () -> r.write("king ")
+        ));
+        keyActionMap.put(VC_L, new ActionList(
+                () -> r.write("L"),
+                () -> r.write("l"),
+                () -> r.write("loadtaking ")
+        ));
+        keyActionMap.put(VC_Z, new ActionList(
+                () -> r.write("Z"),
+                () -> r.write("z"),
+                () -> r.write("zebra ")
+        ));
+        keyActionMap.put(VC_X, new ActionList(
+                () -> r.write("X"),
+                () -> r.write("x"),
+                () -> r.write("xxx ")
+        ));
+        keyActionMap.put(VC_C, new ActionList(
+                () -> r.write("C"),
+                () -> r.write("c"),
+                () -> r.write("cunt ")
+        ));
+        keyActionMap.put(VC_V, new ActionList(
+                () -> r.write("V"),
+                () -> r.write("v"),
+                () -> r.write("vicious ")
+        ));
+        keyActionMap.put(VC_B, new ActionList(
+                () -> r.write("B"),
+                () -> r.write("b"),
+                () -> r.write("bunburned ")
+        ));
+        keyActionMap.put(VC_N, new ActionList(
+                () -> r.write("N"),
+                () -> r.write("n"),
+                () -> r.write("niggah ")
+        ));
+        keyActionMap.put(VC_M, new ActionList(
+                () -> r.write("M"),
+                () -> r.write("m"),
+                () -> r.write("motherfucking ")
+        ));
+    }

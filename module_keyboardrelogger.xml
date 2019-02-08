@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_keyboardrelogger" default="compile.module.keyboardrelogger">
+  <dirname property="module.keyboardrelogger.basedir" file="${ant.file.module_keyboardrelogger}"/>
+  
+  <property name="module.jdk.home.keyboardrelogger" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.keyboardrelogger" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.keyboardrelogger" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.keyboardrelogger" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="keyboardrelogger.output.dir" value="${module.keyboardrelogger.basedir}/target/classes"/>
+  <property name="keyboardrelogger.testoutput.dir" value="${module.keyboardrelogger.basedir}/target/test-classes"/>
+  
+  <path id="keyboardrelogger.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="keyboardrelogger.module.production.classpath">
+    <path refid="${module.jdk.classpath.keyboardrelogger}"/>
+    <path refid="library.maven:_com.1stleg:jnativehook:2.1.0.classpath"/>
+  </path>
+  
+  <path id="keyboardrelogger.runtime.production.module.classpath">
+    <pathelement location="${keyboardrelogger.output.dir}"/>
+    <path refid="library.maven:_com.1stleg:jnativehook:2.1.0.classpath"/>
+  </path>
+  
+  <path id="keyboardrelogger.module.classpath">
+    <path refid="${module.jdk.classpath.keyboardrelogger}"/>
+    <pathelement location="${keyboardrelogger.output.dir}"/>
+    <path refid="library.maven:_com.1stleg:jnativehook:2.1.0.classpath"/>
+  </path>
+  
+  <path id="keyboardrelogger.runtime.module.classpath">
+    <pathelement location="${keyboardrelogger.testoutput.dir}"/>
+    <pathelement location="${keyboardrelogger.output.dir}"/>
+    <path refid="library.maven:_com.1stleg:jnativehook:2.1.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.keyboardrelogger">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.keyboardrelogger">
+    <patternset refid="excluded.from.module.keyboardrelogger"/>
+  </patternset>
+  
+  <path id="keyboardrelogger.module.sourcepath">
+    <dirset dir="${module.keyboardrelogger.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="keyboardrelogger.module.test.sourcepath">
+    <dirset dir="${module.keyboardrelogger.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.keyboardrelogger" depends="compile.module.keyboardrelogger.production,compile.module.keyboardrelogger.tests" description="Compile module KeyboardRelogger"/>
+  
+  <target name="compile.module.keyboardrelogger.production" depends="register.custom.compilers" description="Compile module KeyboardRelogger; production classes">
+    <mkdir dir="${keyboardrelogger.output.dir}"/>
+    <javac2 destdir="${keyboardrelogger.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.keyboardrelogger}/javac">
+      <compilerarg line="${compiler.args.keyboardrelogger}"/>
+      <bootclasspath refid="keyboardrelogger.module.bootclasspath"/>
+      <classpath refid="keyboardrelogger.module.production.classpath"/>
+      <src refid="keyboardrelogger.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.keyboardrelogger"/>
+    </javac2>
+    
+    <copy todir="${keyboardrelogger.output.dir}">
+      <fileset dir="${module.keyboardrelogger.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.keyboardrelogger.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.keyboardrelogger.tests" depends="register.custom.compilers,compile.module.keyboardrelogger.production" description="compile module KeyboardRelogger; test classes" unless="skip.tests">
+    <mkdir dir="${keyboardrelogger.testoutput.dir}"/>
+    <javac2 destdir="${keyboardrelogger.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.keyboardrelogger}/javac">
+      <compilerarg line="${compiler.args.keyboardrelogger}"/>
+      <bootclasspath refid="keyboardrelogger.module.bootclasspath"/>
+      <classpath refid="keyboardrelogger.module.classpath"/>
+      <src refid="keyboardrelogger.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.keyboardrelogger"/>
+    </javac2>
+    
+    <copy todir="${keyboardrelogger.testoutput.dir}">
+      <fileset dir="${module.keyboardrelogger.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.keyboardrelogger" description="cleanup module">
+    <delete dir="${keyboardrelogger.output.dir}"/>
+    <delete dir="${keyboardrelogger.testoutput.dir}"/>
+  </target>
+</project>

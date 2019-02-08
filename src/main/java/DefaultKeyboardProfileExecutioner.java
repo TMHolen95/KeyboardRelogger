@@ -127,7 +127,6 @@ public class DefaultKeyboardProfileExecutioner implements NativeKeyListener {
 
     private void keyInfo(NativeKeyEvent e){
         System.out.println("KeyNr: " + e.getKeyCode() + ", KeyChar: " + e.getKeyChar() + ", KeyLocation: " + e.getKeyLocation());
-
     }
 
     public void nativeKeyTyped(NativeKeyEvent e) {
@@ -135,6 +134,6 @@ public class DefaultKeyboardProfileExecutioner implements NativeKeyListener {
     }
 
     public static void main(String[] args) throws NativeHookException, AWTException {
-        new DefaultKeyboardProfileExecutioner(new CurseKeyboardProfile());
+        new DefaultKeyboardProfileExecutioner(new CapsProfile());
     }
 }

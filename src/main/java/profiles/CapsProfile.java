@@ -246,9 +246,9 @@ public class CapsProfile extends BaseProfile {
                 () -> r.deleteLine()
         ));
 
-        keyActionMap.put(VC_ENTER, new ActionList(
+/*        keyActionMap.put(VC_ENTER, new ActionList(
                 () -> r.shutdown()
-        ));
+        ));*/
     }
 
     public void execute(int key, int duration) {
